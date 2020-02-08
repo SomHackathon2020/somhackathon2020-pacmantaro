@@ -10,7 +10,7 @@ import json
 import tempfile
 import time
 
-from models import User
+from models import User, Activitat
 
 from __init__ import db
 
@@ -28,7 +28,7 @@ def search_activity():
     today_date = time.strftime("%Y-%m-%d")
     return render_template('activity.html', today_date=today_date, load_map=False)
 
-
+@login_required
 @activity.route('/activity', methods=['POST'])
 def search_activity_post():
 
@@ -105,17 +105,30 @@ def search_activity_post():
 
     educació = request.form.get('activity')
 
-
-    """
-    new_activity = Activity(
-            titol=form.email.data,
-            
-        )
+    new_activity = Activitat(
+        completed=False,
+        titol=request.form.get('titol'),
+        comentari_adicional=request.form.get('comentari_adicional'),
+        descripcio_activitat=request.form.get('descripcio_activitat'),
+        categoria=request.form.get('categoria'),
+        remuneracio=request.form.get('remuneracio'),
+        url_imatge=request.form.get('url_imatge'),
+        rang_persones=request.form.get('rang_persones'),
+        data=request.form.get('data'),
+        hora="",
+        lat="",
+        lon="",
+        nom_ubicacio="",
+        valoracio_mitjana_activitat="",
+        extra="",
+        keywords="",
+    )
     db.session.add(new_activity)
     db.session.commit()
-    """
+
     return render_template('activity.html',
                            load_map=True,
+                           titol=request.form.get('titol'),
                            comentari_adicional=request.form.get('comentari_adicional'),
                            descripcio_activitat=request.form.get('descripcio_activitat'),
                            categoria=request.form.get('categoria'),

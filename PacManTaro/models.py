@@ -4,13 +4,14 @@ from __init__ import db
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(1000))
+    name = db.Column(db.String(1000), unique=True)
     email = db.Column(db.String(1000))
     password = db.Column(db.String(100))
 
 
 class Activitat(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+    completed = db.Column(db.Boolean)
     titol = db.Column(db.String(1000))
     comentari_adicional = db.Column(db.String(1000))
     descripcio_activitat = db.Column(db.String(1000))
@@ -26,5 +27,5 @@ class Activitat(db.Model):
     valoracio_mitjana_activitat = db.Column(db.String(1000))
     extra = db.Column(db.String(1000)) #(string)
     keywords = db.Column(db.String(200))
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))  # , nullable=False))
-    user = db.relationship("User", foreign_keys=[user_id])
+    #user_id = db.Column(db.Integer, db.ForeignKey('user.id'))  # , nullable=False))
+    #user = db.relationship("User", foreign_keys=[user_id])
