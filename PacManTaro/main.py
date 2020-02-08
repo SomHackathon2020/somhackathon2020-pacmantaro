@@ -29,13 +29,18 @@ class Commercial():
 
 @main.route('/')
 @main.route('/index')
-def home():
+def index():
     return render_template('index.html')
 
 
-@main.route('/home')
-def home():
-    return "Working"
+@main.route('/projects')
+def projects():
+    return "Projects"
+
+
+@main.route('/about')
+def about():
+    return "About"
 
 
 @main.route('/show')
@@ -49,6 +54,11 @@ def login():
     return render_template('login.html')
 
 
+@main.route('/login_base')
+def login_base():
+    return render_template('login_base.html')
+
+
 @main.route('/login', methods=['POST'])
 def login_post():
     email = request.form.get('email')
@@ -58,7 +68,7 @@ def login_post():
     user = User.query.filter_by(email=email).first()
 
     if not user or not check_password_hash(user.password, password):
-        flash('Please check your login details and try again.')
+        flash('Comprovi les credencials i torni-ho a intentar.')
         return redirect(url_for('main.login'))
 
     login_user(user, remember=remember)
@@ -79,7 +89,7 @@ def signup_post():
     user = User.query.filter_by(email=email).first()
 
     if user:
-        flash('Email address already exists')
+        flash('Adreça ja registrada')
         return redirect(url_for('main.signup'))
 
     new_user = User(email=email, name=name, password=generate_password_hash(password, method='sha256'))
