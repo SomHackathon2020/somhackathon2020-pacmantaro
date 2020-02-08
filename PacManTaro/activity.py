@@ -32,8 +32,8 @@ def search_activity_post():
                 .rename(lambda x: x.replace(" ", "_"), axis="columns")
                 .assign(categoria=lambda x: x["categoria"].str.lower())
         )
-        print("HERE:")
-        print(df.head(2))
+        # print("HERE:")
+        # print(df.head(2))
 
         return df
 
@@ -46,7 +46,7 @@ def search_activity_post():
     ):
 
         category = category.lower()
-        print(df.head(2))
+        # print(df.head(2))
         df = df[df["categoria"] == category]
         df = df[["nom", "lat", "lng"]]
         df["lat"] = df["lat"].str.replace(",", ".")
@@ -68,12 +68,12 @@ def search_activity_post():
         m = folium.Map(location=[41.5411904, 2.4345587], zoom_start=14)
 
         tooltip = "Click para mas información"
-        print(data[:5])
+        # print(data[:5])
         for (name, lat, long) in data:
             folium.CircleMarker(
                 location=[lat, long],
                 radius=12,
-                popup=name,
+                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name}</a>""",
                 tooltip=tooltip,
                 color="#428bca",
                 fill=True,
