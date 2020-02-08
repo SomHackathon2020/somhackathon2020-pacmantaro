@@ -138,3 +138,13 @@ def search_activity_post():
                            data=request.form.get('data'),
                            activity=generate_map(category=activity, return_format="html"),
                            )
+
+
+@activity.route('/add-activity', methods=['POST'])
+def add_activity():
+    last_activity = Activitat.query.filter_by(id=1).first()
+    last_activity.completed = True
+    db.session.add(last_activity)
+    db.session.commit()
+    return "Wait for now..."
+

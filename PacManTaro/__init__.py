@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
 # custom adds for unsplash api
-from img_api_utils import *
+#from img_api_utils import *
 
 db = SQLAlchemy()
 app = Flask(__name__)
@@ -33,6 +33,10 @@ app.register_blueprint(main_blueprint)
 
 from activity import activity as activity_blueprint
 app.register_blueprint(activity_blueprint)
+
+
+from analysis import analysis as analysis_blueprint
+app.register_blueprint(analysis_blueprint)
 
 
 def create_app():
