@@ -73,6 +73,8 @@ def search_activity_post():
         un archivo .html que al renderizarlo aparece el mapa."""
 
         category = category.lower()
+        print("CATEGORY HERE")
+        print(category)
 
         data = get_coords_by_category(category=category)
 
@@ -84,7 +86,7 @@ def search_activity_post():
             folium.CircleMarker(
                 location=[lat, long],
                 radius=12,
-                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name}</a><br><form method="POST" action="/add-activity"><input type="hidden" name="nom_ubicacio" value="{name}"><input type="hidden" name="lat" value="{lat}"><input type="hidden" name="lon" value="{long}"><button type="submit" class="btn btn-primary btn-block">Selecciona aquesta activitat</button></form>""",
+                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" target="_blank" >{name}</a><br><br><form method="POST" action="/add-activity"><input type="hidden" name="nom_ubicacio" value="{name}"><input type="hidden" name="lat" value="{lat}"><input type="hidden" name="lon" value="{long}"><button type="submit" class="btn btn-primary btn-block">Selecciona aquesta ubicació</button></form>""",
                 tooltip=tooltip,
                 color="#428bca",
                 fill=True,
@@ -130,10 +132,11 @@ def search_activity_post():
         nom_ubicacio="",
         valoracio_mitjana_activitat="",
         extra="",
-        keywords=getKeywords(request.form.get('titol'), corpus_keys=all_keywords),
+        keywords=getKeywords(request.form.get('titol'), corpus_keys=all_keywords), #example: walk,beach,tour
     )
     db.session.add(new_activity)
     db.session.commit()
+
 
     return render_template('activity.html',
                            load_map=True,
