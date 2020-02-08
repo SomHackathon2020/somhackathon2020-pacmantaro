@@ -51,10 +51,10 @@ def getKeywords(title, corpus_keys=None):
     doc_ = remove_topos(title)
     # translate
     doc_t    = translator.translate(doc_)
-    # remove stopwords
+    # remove stopwords
     doc_1 = remove_words(doc_t)
     
-    # get TfIdf
+    # get TfIdf
     keywords = analyze(doc_1, corpus_keys, max_k=100)
     return keywords
 
@@ -65,10 +65,10 @@ def getImageURL(title, corpus_keys=None, location="mataró", max_k=3):
     doc_ = remove_topos(title)
     # translate
     doc_t    = translator.translate(doc_)
-    # remove stopwords
+    # remove stopwords
     doc_1 = remove_words(doc_t)
     
-    # get TfIdf
+    # get TfIdf
     keywords = analyze(doc_1, corpus_keys, max_k=max_k)
     # generate img url
     img_url  ="https://source.unsplash.com/1600x900/?" + location + "," + ",".join(keywords)
