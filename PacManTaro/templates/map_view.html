@@ -16,7 +16,7 @@
                 <option value="mobilitat">Mobilitat</option>
                 <option value="serveissocials">Serveis socials</option>
                 <option value="esports">Esports</option>
-                <option value="cultura i oci">Cultura i Oci</option>
+                <option value="culturaioci">Cultura i Oci</option>
                 <option value="serveisreligiosos">Serveis religiosos</option>
                 <option value="centrescivicsisocials">Centres Cívics i Socials</option>
                 <option value="administraciodelestat">Administració de l'Estat</option>
@@ -55,16 +55,6 @@
             </div>
             -->
         </form>
-    <!--
-    { if activity %}
-        { activity }}
-        <a href="{ activity }}" target="_blank"><button class="btn btn-primary btn-block">Mostra el mapa</button></a>
-    { endif %}
-    -->
     </div>
-    {% if activity %}
-    <div style="text-align: center;">
-    <iframe id="serviceFrameSend" src="/static/maps/folium.html" width="700" height="700" frameborder="0"></iframe>
-    </div>
-    {% endif %}
+    <iframe id="iframe"></iframe>
 {% endblock %}

@@ -73,7 +73,7 @@ def search_activity_post():
             folium.CircleMarker(
                 location=[lat, long],
                 radius=12,
-                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name}</a>""",
+                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name} AAAH</a>""",
                 tooltip=tooltip,
                 color="#428bca",
                 fill=True,
@@ -95,7 +95,7 @@ def search_activity_post():
     print("HEEERRE")
     print(activity)
 
-    return render_template('activity.html', activity=generate_map(category=activity, return_format="html"))
+    return render_template('activity.html', load_now=True, activity=generate_map(category=activity, return_format="html"))
 
 
 
