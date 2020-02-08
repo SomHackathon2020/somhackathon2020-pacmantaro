@@ -8,6 +8,7 @@ import folium
 import os
 import json
 import tempfile
+import time
 
 from models import User
 
@@ -16,9 +17,16 @@ from __init__ import db
 activity = Blueprint('activity', __name__)
 
 
+@activity.route('/activity_base')
+def search_activity_base():
+    return render_template('activity_base.html')
+
+
 @activity.route('/activity')
 def search_activity():
-    return render_template('activity.html')
+    # TODO: DATA PER DEFECTE, LA D'AVUI
+    today_date = time.strftime("%Y-%m-%d")
+    return render_template('activity.html', today_date=today_date, load_map=False)
 
 
 @activity.route('/activity', methods=['POST'])
@@ -95,7 +103,25 @@ def search_activity_post():
     print("HEEERRE")
     print(activity)
 
-    return render_template('activity.html', load_now=True, activity=generate_map(category=activity, return_format="html"))
+    educació = request.form.get('activity')
 
 
-
+    """
+    new_activity = Activity(
+            titol=form.email.data,
+            
+        )
+    db.session.add(new_activity)
+    db.session.commit()
+    """
+    return render_template('activity.html',
+                           load_map=True,
+                           comentari_adicional=request.form.get('comentari_adicional'),
+                           descripcio_activitat=request.form.get('descripcio_activitat'),
+                           categoria=request.form.get('categoria'),
+                           remuneracio=request.form.get('remuneracio'),
+                           url_imatge=request.form.get('url_imatge'),
+                           rang_persones=request.form.get('rang_persones'),
+                           data=request.form.get('data'),
+                           activity=generate_map(category=activity, return_format="html"),
+                           )

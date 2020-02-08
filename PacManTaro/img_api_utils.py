@@ -1,3 +1,4 @@
+"""
 import numpy as np
 from translate import Translator
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,7 +11,7 @@ def getStops():
    	return words
 
 def remove_topos(text, stops=["mataró", "mataro", "maresme", "catalunya"]):
-    """ Delete toponyms. """
+    "" Delete toponyms. ""
     text = text.lower().split(" ")
     for i, word in enumerate(text): 
         if word in stops:
@@ -20,7 +21,7 @@ def remove_topos(text, stops=["mataró", "mataro", "maresme", "catalunya"]):
 
 
 def remove_words(text, stops=getStops(), hard_stops=",.-_!?¡''*+^/|"):
-    """ Delete stopwords. """
+    "" Delete stopwords. ""
     for char in hard_stops:
         text = text.replace(char, "")
         
@@ -42,9 +43,10 @@ def analyze(text, corpus, max_k=3):
     keywords = [i2word[x] for x in keys[:min(k, len(doc_1.split(" ")))]]
     return keys
 
-
+"""
 def getImageURL(title, corpus_keys=None, location="mataró", max_k=3):
     """ Get the url for an image based on the experience title. """
+    """
     # remove toponyms - bad translated
     doc_ = remove_topos(title)
     # translate
@@ -57,3 +59,5 @@ def getImageURL(title, corpus_keys=None, location="mataró", max_k=3):
     # generate img url
     img_url  ="https://source.unsplash.com/1600x900/?" + location + "," + ",".join(keywords)
     return img_url
+    """
+    return False
