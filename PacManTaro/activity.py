@@ -78,6 +78,9 @@ def search_activity_post():
             "educació": "static/education.png",
             "casals": "static/casals.png",
         }
+        
+        if category not in icon_dict.keys():
+            category = "esports"
 
         category = category.lower()
         print("CATEGORY HERE")
