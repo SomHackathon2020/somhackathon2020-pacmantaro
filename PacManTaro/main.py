@@ -72,7 +72,7 @@ def login_post():
         return redirect(url_for('main.login'))
 
     login_user(user, remember=remember)
-    return redirect(url_for('main.index'))
+    return redirect(url_for('activity.search_activity'))
 
 
 @main.route('/signup')
@@ -97,7 +97,7 @@ def signup_post():
     db.session.add(new_user)
     db.session.commit()
 
-    return redirect(url_for('main.index'))
+    return redirect(url_for('activity.search_activity'))
 
 
 @main.route('/maps')

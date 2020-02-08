@@ -9,6 +9,9 @@ import os
 import json
 import tempfile
 import time
+from img_api_utils import *
+
+
 
 from models import User, Activitat
 
@@ -81,7 +84,7 @@ def search_activity_post():
             folium.CircleMarker(
                 location=[lat, long],
                 radius=12,
-                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name} AAAH</a>""",
+                popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" onclick="javascript:alert('Vas a ser redirigido a Google Maps')">{name}</a><br><form method="POST" action="/add-activity"><input type="hidden" name="nom_ubicacio" value="{name}"><input type="hidden" name="lat" value="{lat}"><input type="hidden" name="lon" value="{long}"><button type="submit" class="btn btn-primary btn-block">Selecciona aquesta activitat</button></form>""",
                 tooltip=tooltip,
                 color="#428bca",
                 fill=True,
@@ -103,6 +106,12 @@ def search_activity_post():
     print("HEEERRE")
     print(activity)
 
+
+
+    all_activities= Activitat.query.all()
+    all_keywords = [element.keywords for element in all_activities]
+    all_keywords = all_keywords if len(all_keywords) > 0 else None
+
     educació = request.form.get('activity')
 
     new_activity = Activitat(
@@ -112,7 +121,7 @@ def search_activity_post():
         descripcio_activitat=request.form.get('descripcio_activitat'),
         categoria=request.form.get('categoria'),
         remuneracio=request.form.get('remuneracio'),
-        url_imatge=request.form.get('url_imatge'),
+        url_imatge=getImageURL(request.form.get('titol'), corpus_keys=all_keywords),
         rang_persones=request.form.get('rang_persones'),
         data=request.form.get('data'),
         hora="",
@@ -121,7 +130,7 @@ def search_activity_post():
         nom_ubicacio="",
         valoracio_mitjana_activitat="",
         extra="",
-        keywords="",
+        keywords=getKeywords(request.form.get('titol'), corpus_keys=all_keywords),
     )
     db.session.add(new_activity)
     db.session.commit()
@@ -144,7 +153,11 @@ def search_activity_post():
 def add_activity():
     last_activity = Activitat.query.filter_by(id=1).first()
     last_activity.completed = True
+    last_activity.nom_ubicacio = request.form.get('nom_ubicacio')
+    last_activity.lat = request.form.get('lat')
+    last_activity.lon = request.form.get('lon')
+
     db.session.add(last_activity)
     db.session.commit()
-    return "Wait for now..."
+    return "Ubicació afegida a l'activitat " + last_activity.titol
 

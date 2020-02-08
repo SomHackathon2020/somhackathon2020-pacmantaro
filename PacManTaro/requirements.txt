@@ -3,3 +3,6 @@ flask_login
 flask_sqlalchemy
 pandas
 folium
+translate
+numpy
+sklearn
