@@ -28,5 +28,9 @@ from main import main as main_blueprint
 app.register_blueprint(main_blueprint)
 
 
+from activity import activity as activity_blueprint
+app.register_blueprint(activity_blueprint)
+
+
 def create_app():
     return app

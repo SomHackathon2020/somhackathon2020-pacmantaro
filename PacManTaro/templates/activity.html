@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+    <div class="login-form">
+        <form method="POST" action="/activity">
+            <h2 class="text-center">Visualitza les activitats en un mapa</h2>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Selecciona una activitat</label>
+              </div>
+              <select class="custom-select" id="activity" name="activity">
+                <option value="educació">Educació</option>
+                <option value="serveissanitaris">Serveis sanitaris</option>
+                <option value="administraciomunicipal">Administració municipal</option>
+                <option value="mobilitat">Mobilitat</option>
+                <option value="serveissocials">Serveis socials</option>
+                <option value="esports">Esports</option>
+                <option value="culturaioci">Cultura i Oci</option>
+                <option value="serveisreligiosos">Serveis religiosos</option>
+                <option value="centrescivicsisocials">Centres Cívics i Socials</option>
+                <option value="administraciodelestat">Administració de l'Estat</option>
+                <option value="casals">Casals</option>
+                <option value="altresserveis">Altres serveis</option>
+                <option value="mercatsicentrescomercials">Mercats i Centres comercials</option>
+                <option value="residus">Residus</option>
+                <option value="allotjament">Allotjament</option>
+                <option value="justicia">Justícia</option>
+                <option value="serveisperajoves">Serveis per a joves</option>
+                <option value="lavabospublics">Lavabos públics</option>
+                <option value="seguretat">Seguretat</option>
+                <option value="serveisfuneraris">Serveis funeraris</option>
+                <option value="organismesexterns">Organismes externs</option>
+                <option value="companyiesisubministrament">Companyies de subministrament</option>
+                <option value="oficinesdelageneralitatdecatalunya">Oficines de la Generalitat de Catalunya</option>
+                <option value="altresadministracions">Altres administracions</option>
+                <option value="oficinesdeladministracioestatal">Oficines de l'Administració estatal</option>
+                <option value="turisme">Turisme</option>
+              </select>
+            </div>
+            {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <div class="notification is-danger">
+                            <p style="color: red;">{{ messages[0] }}</p>
+                        </div>
+                    {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block">Visualitza el mapa</button>
+            </div>
+            <!--
+            <div class="clearfix">
+                <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
+                <a href="#" class="pull-right">Forgot Password?</a>
+            </div>
+            -->
+        </form>
+    {% if activity %}
+        {{ activity }}
+        <a href="{{ activity }}" target="_blank"><button class="btn btn-primary btn-block">Mostra el mapa</button></a>
+    {% endif %}
+    </div>
+{% endblock %}

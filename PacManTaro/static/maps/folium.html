@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9fb9747259f84a8899ce1ad421f8836b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_9fb9747259f84a8899ce1ad421f8836b" ></div>
+        
+</body>
+<script>    
+    
+            var map_9fb9747259f84a8899ce1ad421f8836b = L.map(
+                "map_9fb9747259f84a8899ce1ad421f8836b",
+                {
+                    center: [41.5411904, 2.4345587],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7d4d3b9cc9234d22b1cd90cb2e67cddd = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+            var circle_marker_b38d37a9f6634248bc58d3bc1d4fd40e = L.circleMarker(
+                [41.5450167965494, 2.44259982930665],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_a3083fba5f73453987debdd5345713d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7553b738bc864b97a0df98dc2566d8dc = $(`<div id="html_7553b738bc864b97a0df98dc2566d8dc" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva Municipal de Casal de Joves</div>`)[0];
+            popup_a3083fba5f73453987debdd5345713d6.setContent(html_7553b738bc864b97a0df98dc2566d8dc);
+        
+
+        circle_marker_b38d37a9f6634248bc58d3bc1d4fd40e.bindPopup(popup_a3083fba5f73453987debdd5345713d6)
+        ;
+
+        
+    
+    
+            circle_marker_b38d37a9f6634248bc58d3bc1d4fd40e.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_296d26fcc541462b9ad1ff6bbf911525 = L.circleMarker(
+                [41.5511311360533, 2.45034268946787],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_f1f26379945642e5bba79b89652e9639 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df2e419dedf449d3bdff86df9691695b = $(`<div id="html_df2e419dedf449d3bdff86df9691695b" style="width: 100.0%; height: 100.0%;">Pistes Municipals de Petanca Rocafonda</div>`)[0];
+            popup_f1f26379945642e5bba79b89652e9639.setContent(html_df2e419dedf449d3bdff86df9691695b);
+        
+
+        circle_marker_296d26fcc541462b9ad1ff6bbf911525.bindPopup(popup_f1f26379945642e5bba79b89652e9639)
+        ;
+
+        
+    
+    
+            circle_marker_296d26fcc541462b9ad1ff6bbf911525.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_25a677704ff64a92a47f41d0415fa870 = L.circleMarker(
+                [41.5378275412627, 2.45265128956323],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_486384eb398447919eb23456f11977d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_89cad8ff2d0642c683a69794d9ba2df0 = $(`<div id="html_89cad8ff2d0642c683a69794d9ba2df0" style="width: 100.0%; height: 100.0%;">Centre Natació Mataró</div>`)[0];
+            popup_486384eb398447919eb23456f11977d7.setContent(html_89cad8ff2d0642c683a69794d9ba2df0);
+        
+
+        circle_marker_25a677704ff64a92a47f41d0415fa870.bindPopup(popup_486384eb398447919eb23456f11977d7)
+        ;
+
+        
+    
+    
+            circle_marker_25a677704ff64a92a47f41d0415fa870.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4972edaee57849ce8c0ca967b6f3aba6 = L.circleMarker(
+                [41.5468895053175, 2.43827453756624],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_30275cdd238b4ec78404ffdb3c5308d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4846d771f1954805b7b82d8c02b023ae = $(`<div id="html_4846d771f1954805b7b82d8c02b023ae" style="width: 100.0%; height: 100.0%;">Poliesportiu Municipal Teresa Maria Roca i Vallmajor</div>`)[0];
+            popup_30275cdd238b4ec78404ffdb3c5308d6.setContent(html_4846d771f1954805b7b82d8c02b023ae);
+        
+
+        circle_marker_4972edaee57849ce8c0ca967b6f3aba6.bindPopup(popup_30275cdd238b4ec78404ffdb3c5308d6)
+        ;
+
+        
+    
+    
+            circle_marker_4972edaee57849ce8c0ca967b6f3aba6.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfd794c77d4d49dba11206fddac6a7c2 = L.circleMarker(
+                [41.5467116601878, 2.43742949764703],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_8ce11331121549ea8b513d905afba430 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ef2a5d837d7e439d85ecc0634b0cc640 = $(`<div id="html_ef2a5d837d7e439d85ecc0634b0cc640" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva Municipal de Cirera</div>`)[0];
+            popup_8ce11331121549ea8b513d905afba430.setContent(html_ef2a5d837d7e439d85ecc0634b0cc640);
+        
+
+        circle_marker_dfd794c77d4d49dba11206fddac6a7c2.bindPopup(popup_8ce11331121549ea8b513d905afba430)
+        ;
+
+        
+    
+    
+            circle_marker_dfd794c77d4d49dba11206fddac6a7c2.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1bf41b002f31494f9dadc0b282d6c6bc = L.circleMarker(
+                [41.5315747617127, 2.43204934849402],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_12fd3118bea8474991d40f000b3775f9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69702aa9f5364b7c8a48dc86283b9c3e = $(`<div id="html_69702aa9f5364b7c8a48dc86283b9c3e" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Can Xalant</div>`)[0];
+            popup_12fd3118bea8474991d40f000b3775f9.setContent(html_69702aa9f5364b7c8a48dc86283b9c3e);
+        
+
+        circle_marker_1bf41b002f31494f9dadc0b282d6c6bc.bindPopup(popup_12fd3118bea8474991d40f000b3775f9)
+        ;
+
+        
+    
+    
+            circle_marker_1bf41b002f31494f9dadc0b282d6c6bc.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f4ff41b320724644854dd0134d030caa = L.circleMarker(
+                [41.5541616958851, 2.42992848084068],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_d8458a4ed1fe45da85e6669c9c5aa491 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e1e14206014a4c86aa605501a572ab8c = $(`<div id="html_e1e14206014a4c86aa605501a572ab8c" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Cirera</div>`)[0];
+            popup_d8458a4ed1fe45da85e6669c9c5aa491.setContent(html_e1e14206014a4c86aa605501a572ab8c);
+        
+
+        circle_marker_f4ff41b320724644854dd0134d030caa.bindPopup(popup_d8458a4ed1fe45da85e6669c9c5aa491)
+        ;
+
+        
+    
+    
+            circle_marker_f4ff41b320724644854dd0134d030caa.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8fd367e0b4714fb5942ebfb0d55e426f = L.circleMarker(
+                [41.5569627845167, 2.42876644270197],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_514c89d17b944e13a589218ae779817b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e884de92f6542a9a5e365ea45da13f3 = $(`<div id="html_7e884de92f6542a9a5e365ea45da13f3" style="width: 100.0%; height: 100.0%;">Estadi Municipal d'Atletisme</div>`)[0];
+            popup_514c89d17b944e13a589218ae779817b.setContent(html_7e884de92f6542a9a5e365ea45da13f3);
+        
+
+        circle_marker_8fd367e0b4714fb5942ebfb0d55e426f.bindPopup(popup_514c89d17b944e13a589218ae779817b)
+        ;
+
+        
+    
+    
+            circle_marker_8fd367e0b4714fb5942ebfb0d55e426f.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cc70fde2395a42e089ee0455cdcd377a = L.circleMarker(
+                [41.5465324595831, 2.44061159030405],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_8a2f8d6ae36d4efcaf94fedf5b375943 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_eacd59a4dbfa4042adfe9f2d787a7a1a = $(`<div id="html_eacd59a4dbfa4042adfe9f2d787a7a1a" style="width: 100.0%; height: 100.0%;">Piscina municipal</div>`)[0];
+            popup_8a2f8d6ae36d4efcaf94fedf5b375943.setContent(html_eacd59a4dbfa4042adfe9f2d787a7a1a);
+        
+
+        circle_marker_cc70fde2395a42e089ee0455cdcd377a.bindPopup(popup_8a2f8d6ae36d4efcaf94fedf5b375943)
+        ;
+
+        
+    
+    
+            circle_marker_cc70fde2395a42e089ee0455cdcd377a.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_57a03a58d2b4484e95084675d2f0ba50 = L.circleMarker(
+                [41.5470120539618, 2.42781543831247],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_4f01f6edfdd8487eb57d2a08d09a135b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_57ce4a46911648be9a29511c135651e6 = $(`<div id="html_57ce4a46911648be9a29511c135651e6" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva Municipal La Llàntia</div>`)[0];
+            popup_4f01f6edfdd8487eb57d2a08d09a135b.setContent(html_57ce4a46911648be9a29511c135651e6);
+        
+
+        circle_marker_57a03a58d2b4484e95084675d2f0ba50.bindPopup(popup_4f01f6edfdd8487eb57d2a08d09a135b)
+        ;
+
+        
+    
+    
+            circle_marker_57a03a58d2b4484e95084675d2f0ba50.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4002a5773aad4dcabd8399d0b545ef62 = L.circleMarker(
+                [41.5403800455562, 2.42102811518156],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_785348fd61dd4a4f8c1194d5fce30a11 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c0013fb9bbb74baea4ae26839ab47369 = $(`<div id="html_c0013fb9bbb74baea4ae26839ab47369" style="width: 100.0%; height: 100.0%;">Centre Municipal d'Esports El Sorrall</div>`)[0];
+            popup_785348fd61dd4a4f8c1194d5fce30a11.setContent(html_c0013fb9bbb74baea4ae26839ab47369);
+        
+
+        circle_marker_4002a5773aad4dcabd8399d0b545ef62.bindPopup(popup_785348fd61dd4a4f8c1194d5fce30a11)
+        ;
+
+        
+    
+    
+            circle_marker_4002a5773aad4dcabd8399d0b545ef62.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a91c95b54f3d4ecd8abfc1d3c4c3da3b = L.circleMarker(
+                [41.5597033351152, 2.43790394665188],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_f700e9dcc5c64d0fb56af5a9eef7bfe4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8918342239a0455ca73f2fbb4ae2aaa1 = $(`<div id="html_8918342239a0455ca73f2fbb4ae2aaa1" style="width: 100.0%; height: 100.0%;">Circuit Municipal de Cros</div>`)[0];
+            popup_f700e9dcc5c64d0fb56af5a9eef7bfe4.setContent(html_8918342239a0455ca73f2fbb4ae2aaa1);
+        
+
+        circle_marker_a91c95b54f3d4ecd8abfc1d3c4c3da3b.bindPopup(popup_f700e9dcc5c64d0fb56af5a9eef7bfe4)
+        ;
+
+        
+    
+    
+            circle_marker_a91c95b54f3d4ecd8abfc1d3c4c3da3b.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eac0575131ec4057a7536de1777b0a42 = L.circleMarker(
+                [41.5439766022098, 2.46061336946017],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_0333601df31b4f85babf032a5cc0371e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6a4196bbb8c1463aaa2d917c1233d371 = $(`<div id="html_6a4196bbb8c1463aaa2d917c1233d371" style="width: 100.0%; height: 100.0%;">Circuit municipal de BMX</div>`)[0];
+            popup_0333601df31b4f85babf032a5cc0371e.setContent(html_6a4196bbb8c1463aaa2d917c1233d371);
+        
+
+        circle_marker_eac0575131ec4057a7536de1777b0a42.bindPopup(popup_0333601df31b4f85babf032a5cc0371e)
+        ;
+
+        
+    
+    
+            circle_marker_eac0575131ec4057a7536de1777b0a42.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db492e1778a24a8bbab9a87f43ef7077 = L.circleMarker(
+                [41.5459835660169, 2.44244414198221],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_914c9a8611374fab81b9c7fbef288af9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ec3faf592da1473eaadd9babf64afba3 = $(`<div id="html_ec3faf592da1473eaadd9babf64afba3" style="width: 100.0%; height: 100.0%;">Camp Municipal d'Esports del Centenari</div>`)[0];
+            popup_914c9a8611374fab81b9c7fbef288af9.setContent(html_ec3faf592da1473eaadd9babf64afba3);
+        
+
+        circle_marker_db492e1778a24a8bbab9a87f43ef7077.bindPopup(popup_914c9a8611374fab81b9c7fbef288af9)
+        ;
+
+        
+    
+    
+            circle_marker_db492e1778a24a8bbab9a87f43ef7077.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_094406b2bd194b51943ec5d7721108c8 = L.circleMarker(
+                [41.5511311360533, 2.45034268946787],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_3720f840271546aca9f8ccdfc8abcd4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83f69c141a2e446ba023c44f9b80ed67 = $(`<div id="html_83f69c141a2e446ba023c44f9b80ed67" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva Municipal de Rocafonda</div>`)[0];
+            popup_3720f840271546aca9f8ccdfc8abcd4d.setContent(html_83f69c141a2e446ba023c44f9b80ed67);
+        
+
+        circle_marker_094406b2bd194b51943ec5d7721108c8.bindPopup(popup_3720f840271546aca9f8ccdfc8abcd4d)
+        ;
+
+        
+    
+    
+            circle_marker_094406b2bd194b51943ec5d7721108c8.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0d05ce6232b144cdb69a37e7feb626de = L.circleMarker(
+                [41.549170436222, 2.437979775215],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_ecf36d17d13d4357b688044ecf66eefa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe057a6e4b9d40b0b492244cd3da24cb = $(`<div id="html_fe057a6e4b9d40b0b492244cd3da24cb" style="width: 100.0%; height: 100.0%;">Pistes de Petanca Cirera</div>`)[0];
+            popup_ecf36d17d13d4357b688044ecf66eefa.setContent(html_fe057a6e4b9d40b0b492244cd3da24cb);
+        
+
+        circle_marker_0d05ce6232b144cdb69a37e7feb626de.bindPopup(popup_ecf36d17d13d4357b688044ecf66eefa)
+        ;
+
+        
+    
+    
+            circle_marker_0d05ce6232b144cdb69a37e7feb626de.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_980eb11b1e914f7e8dbc371043c7950e = L.circleMarker(
+                [41.5456690804773, 2.44248376394851],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_d40718dcc56440479fd8a8a0dcf27fdb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b76343c93384a0db58e2ed7e65ecdb7 = $(`<div id="html_3b76343c93384a0db58e2ed7e65ecdb7" style="width: 100.0%; height: 100.0%;">Palau Municipal d'Esports Josep Mora</div>`)[0];
+            popup_d40718dcc56440479fd8a8a0dcf27fdb.setContent(html_3b76343c93384a0db58e2ed7e65ecdb7);
+        
+
+        circle_marker_980eb11b1e914f7e8dbc371043c7950e.bindPopup(popup_d40718dcc56440479fd8a8a0dcf27fdb)
+        ;
+
+        
+    
+    
+            circle_marker_980eb11b1e914f7e8dbc371043c7950e.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15605c08ba9a46848a951403a48e4a34 = L.circleMarker(
+                [41.5657342737459, 2.43590840123187],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_692e1a3c5797472e8bd7e6e2bdb6bc21 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72422131839f409c97cd153246e24133 = $(`<div id="html_72422131839f409c97cd153246e24133" style="width: 100.0%; height: 100.0%;">Unió Recreativa L.A.R.U</div>`)[0];
+            popup_692e1a3c5797472e8bd7e6e2bdb6bc21.setContent(html_72422131839f409c97cd153246e24133);
+        
+
+        circle_marker_15605c08ba9a46848a951403a48e4a34.bindPopup(popup_692e1a3c5797472e8bd7e6e2bdb6bc21)
+        ;
+
+        
+    
+    
+            circle_marker_15605c08ba9a46848a951403a48e4a34.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2104fbea612b4955b996095dc6eeb474 = L.circleMarker(
+                [41.5457244460973, 2.45158998891315],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_a6afeae1524445958f01fce548508ee8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c4fe0e455844d7e8ddfd79b44549db7 = $(`<div id="html_1c4fe0e455844d7e8ddfd79b44549db7" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva Municipal El Palau</div>`)[0];
+            popup_a6afeae1524445958f01fce548508ee8.setContent(html_1c4fe0e455844d7e8ddfd79b44549db7);
+        
+
+        circle_marker_2104fbea612b4955b996095dc6eeb474.bindPopup(popup_a6afeae1524445958f01fce548508ee8)
+        ;
+
+        
+    
+    
+            circle_marker_2104fbea612b4955b996095dc6eeb474.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f482cbe6c1f3435080d67dcb5f5c9d28 = L.circleMarker(
+                [41.5448147660814, 2.44578433818203],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_072a311ecbad497392a6d4bcdddc4089 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e135c6409af545f9aa63daf01e8316fb = $(`<div id="html_e135c6409af545f9aa63daf01e8316fb" style="width: 100.0%; height: 100.0%;">Club de petanca L'Esplanada</div>`)[0];
+            popup_072a311ecbad497392a6d4bcdddc4089.setContent(html_e135c6409af545f9aa63daf01e8316fb);
+        
+
+        circle_marker_f482cbe6c1f3435080d67dcb5f5c9d28.bindPopup(popup_072a311ecbad497392a6d4bcdddc4089)
+        ;
+
+        
+    
+    
+            circle_marker_f482cbe6c1f3435080d67dcb5f5c9d28.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6aed356950ba4035af47c90ac1c07437 = L.circleMarker(
+                [41.5329303907244, 2.43469517876113],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_98b0b315b4954284bde726b542a5f830 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_90b07b455d6245e9838dbf05757bce1d = $(`<div id="html_90b07b455d6245e9838dbf05757bce1d" style="width: 100.0%; height: 100.0%;">Poliesportiu Municipal Eusebi Millán</div>`)[0];
+            popup_98b0b315b4954284bde726b542a5f830.setContent(html_90b07b455d6245e9838dbf05757bce1d);
+        
+
+        circle_marker_6aed356950ba4035af47c90ac1c07437.bindPopup(popup_98b0b315b4954284bde726b542a5f830)
+        ;
+
+        
+    
+    
+            circle_marker_6aed356950ba4035af47c90ac1c07437.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3788d0c1b1e947359298bb3a41c72f8d = L.circleMarker(
+                [41.5330043134044, 2.43286990636158],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_c6a84deea9b14b6baacf9cf66a97ef7c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_68f25919ae594a51ab7a2455334bcfbd = $(`<div id="html_68f25919ae594a51ab7a2455334bcfbd" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Pla d'en Boet</div>`)[0];
+            popup_c6a84deea9b14b6baacf9cf66a97ef7c.setContent(html_68f25919ae594a51ab7a2455334bcfbd);
+        
+
+        circle_marker_3788d0c1b1e947359298bb3a41c72f8d.bindPopup(popup_c6a84deea9b14b6baacf9cf66a97ef7c)
+        ;
+
+        
+    
+    
+            circle_marker_3788d0c1b1e947359298bb3a41c72f8d.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f9a75fc7aacb483c83f39c1d4dc8aa69 = L.circleMarker(
+                [41.5466802756711, 2.44022259027142],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_84119685c81f4266af9a6b119a8c7778 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4e2eb249b1b44e589c27f9a68c46ab48 = $(`<div id="html_4e2eb249b1b44e589c27f9a68c46ab48" style="width: 100.0%; height: 100.0%;">Gimnàs de Boxa del Velòdrom Municipal</div>`)[0];
+            popup_84119685c81f4266af9a6b119a8c7778.setContent(html_4e2eb249b1b44e589c27f9a68c46ab48);
+        
+
+        circle_marker_f9a75fc7aacb483c83f39c1d4dc8aa69.bindPopup(popup_84119685c81f4266af9a6b119a8c7778)
+        ;
+
+        
+    
+    
+            circle_marker_f9a75fc7aacb483c83f39c1d4dc8aa69.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa880ae3bf0447bf83eeda9fcc8c5f1b = L.circleMarker(
+                [41.5285279017885, 2.43309415609027],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_20186e40445041859827237e80fc7845 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4831374417db4b4b9dea1d8c57067ba9 = $(`<div id="html_4831374417db4b4b9dea1d8c57067ba9" style="width: 100.0%; height: 100.0%;">Skate Park</div>`)[0];
+            popup_20186e40445041859827237e80fc7845.setContent(html_4831374417db4b4b9dea1d8c57067ba9);
+        
+
+        circle_marker_fa880ae3bf0447bf83eeda9fcc8c5f1b.bindPopup(popup_20186e40445041859827237e80fc7845)
+        ;
+
+        
+    
+    
+            circle_marker_fa880ae3bf0447bf83eeda9fcc8c5f1b.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e7f0306122b2450ba2a3001742ec72bd = L.circleMarker(
+                [41.5557242120185, 2.42619565459346],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_11df7d17cc594e3ca277c0fbd32147c6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3a3ef2939164869853c811c233e6819 = $(`<div id="html_a3a3ef2939164869853c811c233e6819" style="width: 100.0%; height: 100.0%;">Camp Municipal de Hoquei</div>`)[0];
+            popup_11df7d17cc594e3ca277c0fbd32147c6.setContent(html_a3a3ef2939164869853c811c233e6819);
+        
+
+        circle_marker_e7f0306122b2450ba2a3001742ec72bd.bindPopup(popup_11df7d17cc594e3ca277c0fbd32147c6)
+        ;
+
+        
+    
+    
+            circle_marker_e7f0306122b2450ba2a3001742ec72bd.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c6f4b846f4eb4f438f7872e029405e36 = L.circleMarker(
+                [41.5497579753109, 2.42691076338725],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_baba8f68d1034587b603f66d396bb9f5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b016c7c4b6a0444bb6f3428cec855105 = $(`<div id="html_b016c7c4b6a0444bb6f3428cec855105" style="width: 100.0%; height: 100.0%;">Pistes Municipals de Petanca de La Llàntia</div>`)[0];
+            popup_baba8f68d1034587b603f66d396bb9f5.setContent(html_b016c7c4b6a0444bb6f3428cec855105);
+        
+
+        circle_marker_c6f4b846f4eb4f438f7872e029405e36.bindPopup(popup_baba8f68d1034587b603f66d396bb9f5)
+        ;
+
+        
+    
+    
+            circle_marker_c6f4b846f4eb4f438f7872e029405e36.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_62be85d9fc9f4d798fe6f458321d1b82 = L.circleMarker(
+                [41.5349954151927, 2.42401238916761],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_01e11f0299d647fd957e0e8314b2729b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ee1d312ad7c465eae62bc52946ff9f5 = $(`<div id="html_6ee1d312ad7c465eae62bc52946ff9f5" style="width: 100.0%; height: 100.0%;">Pistes Municipals de Petanca Ramon Berenguer</div>`)[0];
+            popup_01e11f0299d647fd957e0e8314b2729b.setContent(html_6ee1d312ad7c465eae62bc52946ff9f5);
+        
+
+        circle_marker_62be85d9fc9f4d798fe6f458321d1b82.bindPopup(popup_01e11f0299d647fd957e0e8314b2729b)
+        ;
+
+        
+    
+    
+            circle_marker_62be85d9fc9f4d798fe6f458321d1b82.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_01ba06c12b0c46a78e5cfa5aed815778 = L.circleMarker(
+                [41.5449975525542, 2.42902950684445],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_0c6a7259ee3e4b21b6b8b5512205818d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d4c48eff89d440aaa3fdd84c56c2a80 = $(`<div id="html_8d4c48eff89d440aaa3fdd84c56c2a80" style="width: 100.0%; height: 100.0%;">Poliesportiu Municipal del Carrer d'Euskadi</div>`)[0];
+            popup_0c6a7259ee3e4b21b6b8b5512205818d.setContent(html_8d4c48eff89d440aaa3fdd84c56c2a80);
+        
+
+        circle_marker_01ba06c12b0c46a78e5cfa5aed815778.bindPopup(popup_0c6a7259ee3e4b21b6b8b5512205818d)
+        ;
+
+        
+    
+    
+            circle_marker_01ba06c12b0c46a78e5cfa5aed815778.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de71285ec78449aaadd9ea569d0602d5 = L.circleMarker(
+                [41.5537083173931, 2.44470132381894],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_2498908915f64a91bf97ad3f35f18532 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9a4d2c323020460baea019de74853a87 = $(`<div id="html_9a4d2c323020460baea019de74853a87" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Vista Alegre-Molins</div>`)[0];
+            popup_2498908915f64a91bf97ad3f35f18532.setContent(html_9a4d2c323020460baea019de74853a87);
+        
+
+        circle_marker_de71285ec78449aaadd9ea569d0602d5.bindPopup(popup_2498908915f64a91bf97ad3f35f18532)
+        ;
+
+        
+    
+    
+            circle_marker_de71285ec78449aaadd9ea569d0602d5.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8e779ad6d9ba44dfbb6e25b9bc94e1a7 = L.circleMarker(
+                [41.5511311360533, 2.45034268946787],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_a1627437048c401489bc5b5d8de252c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0ef777ae794f4249811a395fad30e811 = $(`<div id="html_0ef777ae794f4249811a395fad30e811" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol de Rocafonda</div>`)[0];
+            popup_a1627437048c401489bc5b5d8de252c0.setContent(html_0ef777ae794f4249811a395fad30e811);
+        
+
+        circle_marker_8e779ad6d9ba44dfbb6e25b9bc94e1a7.bindPopup(popup_a1627437048c401489bc5b5d8de252c0)
+        ;
+
+        
+    
+    
+            circle_marker_8e779ad6d9ba44dfbb6e25b9bc94e1a7.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_60c6c79cbdd64145b1fcf9e1e4f06330 = L.circleMarker(
+                [41.5472978594663, 2.43770041342946],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_4ce0e7dd69dd4094b730160eb5698373 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7b13ed7e0fd49fa8813e53e091139c7 = $(`<div id="html_e7b13ed7e0fd49fa8813e53e091139c7" style="width: 100.0%; height: 100.0%;">Camp municipal de futbol A7 de Cirera Francisco Melero Navarro</div>`)[0];
+            popup_4ce0e7dd69dd4094b730160eb5698373.setContent(html_e7b13ed7e0fd49fa8813e53e091139c7);
+        
+
+        circle_marker_60c6c79cbdd64145b1fcf9e1e4f06330.bindPopup(popup_4ce0e7dd69dd4094b730160eb5698373)
+        ;
+
+        
+    
+    
+            circle_marker_60c6c79cbdd64145b1fcf9e1e4f06330.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_90352b0213ba4c72aed278f78d8c48ef = L.circleMarker(
+                [41.535473703664, 2.42458236421121],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_b3066eaa6a35435da2a1a2ef677ef40e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_799e4b53558f4387bef6420fd8cfd394 = $(`<div id="html_799e4b53558f4387bef6420fd8cfd394" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Camí del Mig</div>`)[0];
+            popup_b3066eaa6a35435da2a1a2ef677ef40e.setContent(html_799e4b53558f4387bef6420fd8cfd394);
+        
+
+        circle_marker_90352b0213ba4c72aed278f78d8c48ef.bindPopup(popup_b3066eaa6a35435da2a1a2ef677ef40e)
+        ;
+
+        
+    
+    
+            circle_marker_90352b0213ba4c72aed278f78d8c48ef.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_944d23f6112946c69443791373182c82 = L.circleMarker(
+                [41.535473703664, 2.42458236421121],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_5900f58b46fc4e5eb98c4d7d757e67e8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9d8805945ee1496d97dd9fad93c342ca = $(`<div id="html_9d8805945ee1496d97dd9fad93c342ca" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol Enric Pujol</div>`)[0];
+            popup_5900f58b46fc4e5eb98c4d7d757e67e8.setContent(html_9d8805945ee1496d97dd9fad93c342ca);
+        
+
+        circle_marker_944d23f6112946c69443791373182c82.bindPopup(popup_5900f58b46fc4e5eb98c4d7d757e67e8)
+        ;
+
+        
+    
+    
+            circle_marker_944d23f6112946c69443791373182c82.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b518d7feefc04af79e9315f15f2eba79 = L.circleMarker(
+                [41.5466802756711, 2.44022259027142],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_736f7a1ca91f4406b66762a016af8f13 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c19a6634add149e587434c4da59b982d = $(`<div id="html_c19a6634add149e587434c4da59b982d" style="width: 100.0%; height: 100.0%;">Pista Poliesportiva del Velòdrom Municipal</div>`)[0];
+            popup_736f7a1ca91f4406b66762a016af8f13.setContent(html_c19a6634add149e587434c4da59b982d);
+        
+
+        circle_marker_b518d7feefc04af79e9315f15f2eba79.bindPopup(popup_736f7a1ca91f4406b66762a016af8f13)
+        ;
+
+        
+    
+    
+            circle_marker_b518d7feefc04af79e9315f15f2eba79.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac8b8d4701344fed8b1642ad96461e13 = L.circleMarker(
+                [41.5497579753109, 2.42691076338725],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_135e72c6d82a4be4851e888934041e4e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22e6e3dfde754ae8bc45143e3e8e8f49 = $(`<div id="html_22e6e3dfde754ae8bc45143e3e8e8f49" style="width: 100.0%; height: 100.0%;">Camp Municipal de Futbol de la Llàntia</div>`)[0];
+            popup_135e72c6d82a4be4851e888934041e4e.setContent(html_22e6e3dfde754ae8bc45143e3e8e8f49);
+        
+
+        circle_marker_ac8b8d4701344fed8b1642ad96461e13.bindPopup(popup_135e72c6d82a4be4851e888934041e4e)
+        ;
+
+        
+    
+    
+            circle_marker_ac8b8d4701344fed8b1642ad96461e13.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f7d66765d918448586c65cbbeaf189eb = L.circleMarker(
+                [41.561389822598, 2.43286819203615],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_480ccf5bb7f74194b73feb856770c8b6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3d2b46111d348d6929a4af393f9ce3a = $(`<div id="html_a3d2b46111d348d6929a4af393f9ce3a" style="width: 100.0%; height: 100.0%;">Club de Tenis Les Sureres</div>`)[0];
+            popup_480ccf5bb7f74194b73feb856770c8b6.setContent(html_a3d2b46111d348d6929a4af393f9ce3a);
+        
+
+        circle_marker_f7d66765d918448586c65cbbeaf189eb.bindPopup(popup_480ccf5bb7f74194b73feb856770c8b6)
+        ;
+
+        
+    
+    
+            circle_marker_f7d66765d918448586c65cbbeaf189eb.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49f967d6f2c64c3296abde046a3dd5e7 = L.circleMarker(
+                [41.5552166956595, 2.4603012247441],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_e45ced312f2d4221a9d59ca2d5586053 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_22582ac7370541858ae84a6f0fa96e53 = $(`<div id="html_22582ac7370541858ae84a6f0fa96e53" style="width: 100.0%; height: 100.0%;">Club de Tenis Mataró</div>`)[0];
+            popup_e45ced312f2d4221a9d59ca2d5586053.setContent(html_22582ac7370541858ae84a6f0fa96e53);
+        
+
+        circle_marker_49f967d6f2c64c3296abde046a3dd5e7.bindPopup(popup_e45ced312f2d4221a9d59ca2d5586053)
+        ;
+
+        
+    
+    
+            circle_marker_49f967d6f2c64c3296abde046a3dd5e7.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_600c9d1de5814a19886f2764b2cfb041 = L.circleMarker(
+                [41.5716945001824, 2.43990503369063],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_416da89480664213bfc988f2f1cd09f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc4cbd419a3846269729b2bdb226827c = $(`<div id="html_bc4cbd419a3846269729b2bdb226827c" style="width: 100.0%; height: 100.0%;">Centre Atlètic Laietàina</div>`)[0];
+            popup_416da89480664213bfc988f2f1cd09f6.setContent(html_bc4cbd419a3846269729b2bdb226827c);
+        
+
+        circle_marker_600c9d1de5814a19886f2764b2cfb041.bindPopup(popup_416da89480664213bfc988f2f1cd09f6)
+        ;
+
+        
+    
+    
+            circle_marker_600c9d1de5814a19886f2764b2cfb041.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c0ef49c1239f4c5ba5dfabaf208c964d = L.circleMarker(
+                [41.5471134945806, 2.43763525931364],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_46818f89b4784e018c87771ec08c8c86 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_627f4d9da68545a991eda5346292bcd2 = $(`<div id="html_627f4d9da68545a991eda5346292bcd2" style="width: 100.0%; height: 100.0%;">Poliesportiu Municipal Jaume Parera i León</div>`)[0];
+            popup_46818f89b4784e018c87771ec08c8c86.setContent(html_627f4d9da68545a991eda5346292bcd2);
+        
+
+        circle_marker_c0ef49c1239f4c5ba5dfabaf208c964d.bindPopup(popup_46818f89b4784e018c87771ec08c8c86)
+        ;
+
+        
+    
+    
+            circle_marker_c0ef49c1239f4c5ba5dfabaf208c964d.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7e73cff02b624a02ba032e3009b4c11c = L.circleMarker(
+                [41.5332485632208, 2.44615622879461],
+                {"bubblingMouseEvents": true, "color": "#428bca", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#428bca", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_9fb9747259f84a8899ce1ad421f8836b);
+        
+    
+        var popup_3b24972fe3e649f8b878c9bd67fbabda = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2fa8d16ee55549f59c10cc85c02cdee2 = $(`<div id="html_2fa8d16ee55549f59c10cc85c02cdee2" style="width: 100.0%; height: 100.0%;">Base Nàutica Municipal</div>`)[0];
+            popup_3b24972fe3e649f8b878c9bd67fbabda.setContent(html_2fa8d16ee55549f59c10cc85c02cdee2);
+        
+
+        circle_marker_7e73cff02b624a02ba032e3009b4c11c.bindPopup(popup_3b24972fe3e649f8b878c9bd67fbabda)
+        ;
+
+        
+    
+    
+            circle_marker_7e73cff02b624a02ba032e3009b4c11c.bindTooltip(
+                `<div>
+                     Click para mas información
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

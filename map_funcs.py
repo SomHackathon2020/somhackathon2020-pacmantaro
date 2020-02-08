@@ -11,7 +11,7 @@ import json
 import tempfile
 
 
-def read(path="equipaments_tots.csv", na=np.nan):
+def read(path="PacManTaro/static/databases/equipaments_tots.csv"):
     df = (
         pd.read_csv(path, encoding="ISO-8859-1")
         .dropna(how="all", axis=0)
@@ -52,7 +52,7 @@ def generate_map(category: str = "esport", return_format: str = "html") -> str:
 
     tooltip = "Click para mas información"
 
-    for (name, lat, long) in cds:
+    for (name, lat, long) in data:
 
         folium.CircleMarker(
             location=[lat, long],
@@ -68,11 +68,11 @@ def generate_map(category: str = "esport", return_format: str = "html") -> str:
         temp_dir = tempfile.mkdtemp(prefix="maphtml")
         path = f"{temp_dir}/folium.html"
         m.save(path)
-
+        print(path)
         return path
 
     elif return_format == "json":
         return m.to_json()
 
 
-generate_map(category="esports", return_format="json")
+generate_map(category="esports", return_format="html")
