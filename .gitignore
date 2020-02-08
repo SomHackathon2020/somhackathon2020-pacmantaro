@@ -1,0 +1,4 @@
+PacManTaro/__pycache__/
+PacManTaro/venv/
+PacManTaro/db.*
+.idea/

@@ -1,0 +1,12 @@
+ZONA,CODI_PARADA,DESCRIPCIO_ADRECA,LAT,LNG,WKT
+"Parades taxi","0","Carrer de Tordera (davant l'accés a l'hotel Ibis)                               ","41,5259206565954","2,4323881127085","POINT (2.4323881127085 41.5259206565954)"
+"Parades taxi","1","Camí Ral (davant de l'Hotel Ciutat Mataró)                                      ","41,5296118753515","2,43606111704405","POINT (2.43606111704405 41.5296118753515)"
+"Parades taxi","2","Plaça de les Tereses (cantonada Carrer del Deu de Gener)                        ","41,5362317805402","2,44087107626858","POINT (2.44087107626858 41.5362317805402)"
+"Parades taxi","3","Muralla de Sant Llorenç (cantonada La Riera)                                    ","41,5365665504426","2,44350337474479","POINT (2.44350337474479 41.5365665504426)"
+"Parades taxi","4","Avinguda del Perú (cantonada Carrer de la República Argentina)                  ","41,5462695946674","2,44676855899365","POINT (2.44676855899365 41.5462695946674)"
+"Parades taxi","5","Camí del Mig (tocant la rotonda Plaça de Manuel Serra i Xifra)                  ","41,5344818581717","2,4292658259292","POINT (2.4292658259292 41.5344818581717)"
+"Parades taxi","6","Mataró Parc (dins l'aparcament)                                                 ","41,5526163873564","2,43167779478629","POINT (2.43167779478629 41.5526163873564)"
+"Parades taxi","7","Hospital de Mataró (tocant l'entrada principal)                                 ","41,5543462211084","2,42841657869948","POINT (2.42841657869948 41.5543462211084)"
+"Parades taxi","8","Avinguda de la Gatassa (davant el Parc de Cerdanyola)                           ","41,5381050843415","2,42481175194385","POINT (2.42481175194385 41.5381050843415)"
+"Parades taxi","9","Plaça Espanya (cantonada La Riera)                                              ","41,5426583354621","2,44091887000772","POINT (2.44091887000772 41.5426583354621)"
+"Parades taxi","10","Carrer de Cosme Churruca (cantonada Avinguda del Maresme)                       ","41,5318836871728","2,44401804539459","POINT (2.44401804539459 41.5318836871728)"
