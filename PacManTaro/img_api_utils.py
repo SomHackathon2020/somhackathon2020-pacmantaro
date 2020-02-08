@@ -33,6 +33,9 @@ def remove_words(text, stops=getStops(), hard_stops=",.-_!?¡''*+^/|"):
     return " ".join(text)
 
 def analyze(text, corpus, max_k=3):
+	if corpus is None:
+		return corpus.split(" ")
+
     vectorizer = TfidfVectorizer()
 
     total_data = corpus_1+[doc_1]
@@ -41,6 +44,19 @@ def analyze(text, corpus, max_k=3):
     keys       = np.argsort(np.array(rankings.todense())[-1])[::-1]
     keywords = [i2word[x] for x in keys[:min(k, len(doc_1.split(" ")))]]
     return keys
+
+
+def getKeywords(title, corpus_keys=None):
+	# remove toponyms - bad translated
+    doc_ = remove_topos(title)
+    # translate
+    doc_t    = translator.translate(doc_)
+    # remove stopwords
+    doc_1 = remove_words(doc_t)
+    
+    # get TfIdf
+    keywords = analyze(doc_1, corpus_keys, max_k=100)
+    return keywords
 
 
 def getImageURL(title, corpus_keys=None, location="mataró", max_k=3):
