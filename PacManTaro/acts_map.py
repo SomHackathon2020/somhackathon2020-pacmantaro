@@ -42,8 +42,38 @@ def clean_str(s):
 
     return s
 
-
 @acts_map.route("/acts_map")
+def get_current_map():
+
+    all_activities = Activitat.query.all()
+    all_activities_good = []
+    for el in all_activities:
+        if el.id and el.lat and el.lon and el.titol and el.nom_ubicacio:
+            all_activities_good.append(el)
+            print("___")
+            print(el.id)
+            print(el.lat)
+            print(el.lon)
+            print(el.titol)
+    return render_template('leaflet_map_extended.html', records=all_activities_good, actiu=True)
+    """
+    for act in all_activities:
+
+    full_path_to_open_file = "static/databases/" + name_to_open_file
+
+    with open(full_path_to_open_file) as csv_file:
+        reader = csv.DictReader(csv_file)
+        all_commercial_list = []
+        for row in reader:
+            if row["LAT"] and row["LNG"] and row["CODI_ACCES"]:
+                new_commercial = Commercial(row['CODI_ACCES'], row['ADRECA'], row['EPIGRAF_IAE'], row['EPIGRAF_DESC'], row['LAT'], row['LNG'], row['WKT'])
+                all_commercial_list.append(new_commercial)
+                print(new_commercial)
+        return render_template('leaflet_map.html', records=all_commercial_list)
+    """
+
+
+@acts_map.route("/acts_map_old")
 def return_current_map():
 
     events = Activitat.query.all()
