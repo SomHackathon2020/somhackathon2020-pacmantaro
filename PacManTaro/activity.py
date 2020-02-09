@@ -78,6 +78,16 @@ def search_activity_post():
     def generate_map(category: str = "esport", return_format: str = "html") -> str:
         """Si el parámnetro return_format = 'html' la función devuelve una ruta de archivo que apunta a
         un archivo .html que al renderizarlo aparece el mapa."""
+        
+        icon_dict = {
+            "esports": "static/esports.png",
+            "cultura i oci": "static/cultura.png",
+            "educació": "static/education.png",
+            "casals": "static/casals.png",
+        }
+        
+        if category not in icon_dict.keys():
+            category = "esports"
 
         category = category.lower()
         print("CATEGORY HERE")
@@ -90,12 +100,13 @@ def search_activity_post():
         tooltip = "Click para mas información"
         # print(data[:5])
         for (name, lat, long) in data:
-            folium.CircleMarker(
+            folium.Marker(
                 location=[lat, long],
                 radius=12,
                 popup=f"""<a href="http://www.google.com/maps/place/{lat},{long}" target="_blank" >{name}</a><br><br><form method="POST" action="/add-activity"><input type="hidden" name="nom_ubicacio" value="{name}"><input type="hidden" name="lat" value="{lat}"><input type="hidden" name="lon" value="{long}"><button type="submit" class="btn btn-primary btn-block">Selecciona aquesta ubicació</button></form>""",
                 tooltip=tooltip,
                 color="#428bca",
+                icon=folium.features.CustomIcon(icon_dict[category], icon_size=(25, 25)),
                 fill=True,
                 fill_color="#428bca",
             ).add_to(m)
