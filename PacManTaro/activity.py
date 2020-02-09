@@ -24,17 +24,24 @@ activity = Blueprint('activity', __name__)
 def search_activity_base():
     return render_template('activity_base.html')
 
-
+@activity.route("/")
 @activity.route('/activity')
 def search_activity():
     # TODO: DATA PER DEFECTE, LA D'AVUI
-    today_date = time.strftime("%Y-%m-%d")
-    return render_template('activity.html', today_date=today_date, load_map=False)
+    if current_user.is_authenticated:
+        print(current_user)
+        print(current_user.name)
+        print(current_user.email)
+        today_date = time.strftime("%Y-%m-%d")
+        return render_template('activity.html', today_date=today_date, load_map=False, actiu=True)
+    else:
+        return redirect(url_for('main.login'))
 
 @login_required
 @activity.route('/activity', methods=['POST'])
 def search_activity_post():
-
+    print("SUPPOSED CATEGORY")
+    print(request.form.get('category'))
     def read(path="static/databases/equipaments_tots.csv"):
         df = (
             pd.read_csv(path, encoding="ISO-8859-1")
@@ -114,7 +121,6 @@ def search_activity_post():
     all_keywords = [element.keywords for element in all_activities]
     all_keywords = all_keywords if len(all_keywords) > 0 else None
 
-    educació = request.form.get('activity')
 
     new_activity = Activitat(
         completed=False,
@@ -139,6 +145,7 @@ def search_activity_post():
 
 
     return render_template('activity.html',
+                           actiu=True,
                            load_map=True,
                            titol=request.form.get('titol'),
                            comentari_adicional=request.form.get('comentari_adicional'),
@@ -162,5 +169,34 @@ def add_activity():
 
     db.session.add(last_activity)
     db.session.commit()
-    return "Ubicació afegida a l'activitat " + last_activity.titol
+    #return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p>"
+    flash("Ubicació " + request.form.get('nom_ubicacio') + " afegida correctament")
+    #return redirect(url_for('activity.allact'))
+    return "<a href='/login' target='_blank' onClick='openWindowReload(this)'><p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a></p><script>\
+			function openWindowReload(link) {\
+				var href = link.href;\
+				window.open(href,'_blank');\
+				document.location.reload(true)\
+			}\
+		</script>"
 
+@activity.route('/allacts', methods=['GET'])
+def allact():
+    return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p>"
+    #acts = Activitat.query.all()
+    #acts = acts if acts else []
+    #return render_template("act_list.html", acts=acts)
+
+
+@activity.route('/full_list')
+def full_list():
+    all_activities = Activitat.query.all()
+    #print(all_activities.url_imatge)
+    """
+    for element in all_activities:
+        print("NEW:")
+        print(element.id)
+        print(element.url_imatge)
+    print("PRINTED")
+    """
+    return render_template("full_list.html", all_activities=all_activities)
