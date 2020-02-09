@@ -234,7 +234,7 @@ def search():
 
 @activity.route('/search')
 def search():
-    return render_template("search_list.html")
+    return render_template("search_list.html", actiu=True)
 
 
 
@@ -268,9 +268,9 @@ def search_results():
 
 
 
-@activity.route('/activity_detail/<int:id_activitat>')
+@activity.route('/activity_detail/<id_activitat>')
 def form_test(id_activitat):
     print(id_activitat)
-    this_activity = Activitat.query.filter_by(id=id_activitat).first()
+    this_activity = Activitat.query.filter_by(id=int(id_activitat)).first()
     print(this_activity.titol)
     return render_template('activity_detail.html', this_activity=this_activity, actiu=True)
