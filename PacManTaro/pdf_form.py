@@ -89,7 +89,7 @@ def merge_pdfs(form_pdf, overlay_pdf, output):
 
 @pdf_form.route("/form_test/<int:id_activitat>")
 def form_test(id_activitat):
-    actividad = Activitat.query.filter_by(user_id=current_user.id).first()
+    actividad = Activitat.query.filter_by(id=id_activitat).first()
     user = User.query.filter_by(id=actividad.user_id).first()
     # user = User.query.filter_by()
     print(actividad.json)
@@ -109,7 +109,7 @@ def form_test(id_activitat):
     )
 
     merge_pdfs(
-        "static/pdfs/template2.pdf",
+        "static/pdfs/template.pdf",
         "static/pdfs/simple_form_overlay.pdf",
         "static/pdfs/merged_form.pdf",
     )
