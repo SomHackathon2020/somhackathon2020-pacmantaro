@@ -6,3 +6,4 @@ folium
 translate
 numpy
 sklearn
+pdfrw
