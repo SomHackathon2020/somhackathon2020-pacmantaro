@@ -28,6 +28,16 @@ Nuestra propuesta se podría concretar en tres puntos:
 [![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale)
 [![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale?type=dev)
 
+## Nosotros
+
+Ricardo Ander-Egg Aguilar – [ricardoadneregg.com](ricardoanderegg.com) - [@ricardoanderegg](https://twitter.com/ricardoanderegg) – [https://github.com/polyrand/](https://github.com/polyrand/)
+
+Eric Alcaide – [ericalcaide.com](ericalcaide.com) - [@eric_alcaide](https://twitter.com/eric_alcaide) – [https://github.com/ericalcaide/](https://github.com/ericalcaide/)
+
+Ignasi Oliver – [oliver.software](oliver.software) – [https://github.com/ignasioliver/](https://github.com/ignasioliver/)
+
+Alex Alcaide - [@tuiterdealex](https://twitter.com/ricardoanderegg) – [https://github.com/polyrand/](https://github.com/polyrand/)
+
 ## Download and Installation
 
 To begin using this template, choose one of the following options to get started:
