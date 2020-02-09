@@ -80,10 +80,10 @@ def search_activity_post():
         un archivo .html que al renderizarlo aparece el mapa."""
         
         icon_dict = {
-            "esports": "static/esports.png",
-            "cultura i oci": "static/cultura.png",
-            "educació": "static/education.png",
-            "casals": "static/casals.png",
+            "esports": "static/img/esports.png",
+            "cultura i oci": "static/img/cultura.png",
+            "educació": "static/img/education.png",
+            "casals": "static/img/casals.png",
         }
         
         if category not in icon_dict.keys():
@@ -180,10 +180,10 @@ def add_activity():
 
     db.session.add(last_activity)
     db.session.commit()
-    #return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p>"
+    #return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><body><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p></body>"
     flash("Ubicació " + request.form.get('nom_ubicacio') + " afegida correctament")
     #return redirect(url_for('activity.allact'))
-    return "<a href='/login' target='_blank' onClick='openWindowReload(this)'><p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a></p><script>\
+    return "<a href='/full_list' target='_blank' onClick='openWindowReload(this)'><p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a></p><script>\
 			function openWindowReload(link) {\
 				var href = link.href;\
 				window.open(href,'_blank');\
@@ -193,7 +193,7 @@ def add_activity():
 
 @activity.route('/allacts', methods=['GET'])
 def allact():
-    return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p>"
+    return "<head><meta http-equiv='refresh' content='2; URL=/full_list'></head><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p>"
     #acts = Activitat.query.all()
     #acts = acts if acts else []
     #return render_template("act_list.html", acts=acts)
