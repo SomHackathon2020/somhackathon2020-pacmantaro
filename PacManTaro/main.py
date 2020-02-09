@@ -27,7 +27,6 @@ class Commercial():
                + str(self.adreca)
 
 
-@main.route('/')
 @main.route('/index')
 def index():
     return render_template('index.html')
@@ -51,6 +50,8 @@ def show():
 
 @main.route('/login')
 def login():
+    if current_user.is_authenticated:
+        return redirect(url_for('activity.search_activity'))
     return render_template('login.html')
 
 
@@ -73,6 +74,14 @@ def login_post():
 
     login_user(user, remember=remember)
     return redirect(url_for('activity.search_activity'))
+
+
+@main.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    flash("Sessió tancada correctament")
+    return redirect(url_for('main.login'))
 
 
 @main.route('/signup')

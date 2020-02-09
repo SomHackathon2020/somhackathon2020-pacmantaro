@@ -24,6 +24,9 @@ def act(ide):
     return render_template("act_list.html", acts=acts)
 
 
+
+
+
 @analysis.route('/test/<ide>', methods=['GET'])
 def testing(ide):
     acts = Activitat.query.filter_by(id=ide).first()

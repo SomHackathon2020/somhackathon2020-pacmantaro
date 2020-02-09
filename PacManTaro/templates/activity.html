@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br><br>
+<br>
     {% if load_map == False %}
     <div class="login-form">
         <form method="POST" action="/activity">
@@ -15,19 +15,11 @@
             </div>
 
             <div class="form-group">
-                <input type="text" name="descripcio_activitat" class="form-control" placeholder="Descripció de l'activitat">
-            </div>
-
-            <div class="form-group">
-                <input type="text" name="categoria" class="form-control" placeholder="Categoria">
+                <textarea name="descripcio_activitat" class="form-control" placeholder="Descripció de l'activitat"></textarea>
             </div>
 
             <div class="form-group">
                 <input type="text" name="remuneracio" class="form-control" placeholder="Remuneració">
-            </div>
-
-            <div class="form-group">
-                <input type="text" name="url_imatge" class="form-control" placeholder="URL imatge">
             </div>
 
             <div class="form-group">
@@ -81,7 +73,7 @@
                     {% endif %}
             {% endwith %}
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-block">Visualitza el mapa</button>
+                <button type="submit" class="btn btn-info btn-block">Selecciona la ubicació</button>
             </div>
             <!--
             <div class="clearfix">
@@ -136,6 +128,7 @@
          </div>
     {% endif %}
     {% if activity %}
+        <p style="text-align: center;">A continuació clica sobre una ubicació i selecciona-la:</p>
     <div style="text-align: center;">
     <iframe id="serviceFrameSend" src="/static/maps/folium.html" width="100%" height="700" frameborder="0"></iframe>
     </div>

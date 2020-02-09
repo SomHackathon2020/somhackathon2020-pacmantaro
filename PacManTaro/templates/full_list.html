@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="py-5">
+    <div class="container">
+        <div class="row ">
+
+         {% for one_activity in all_activities %}
+        <div class="col-md-4">
+        <div class="card" style="width: auto;">
+                <!--<p>{ one_activity.url_imatge }}</p>-->
+              <img class="card-img-top" src="{{ one_activity.url_imatge }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ one_activity.titol }}</h5>
+                <h4 class="card-title">{{ one_activity.categoria }}</h4>
+                <h3 class="card-title">{{ one_activity.nom_ubicacio }}</h3>
+                <p class="card-text"><i>{{ one_activity.data }}</i></p>
+                <!--<h2 class="card-title">{ one_activity.user }}</h2>-->
+                <p class="card-text">{{ one_activity.descripcio_activitat }}</p>
+                <a href="#" class="btn btn-primary">Més informació</a>
+          </div>
+        </div>
+        </div>
+         {% endfor %}
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
