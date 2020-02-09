@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="../static/css/stylesearch.css" />
+  </head>
+  <body>
+    <form class="search-form">
+      <input type="text" class="search" placeholder="Actividad" />
+      <ul class="suggestions">
+        <li>Busca una actividad</li>
+        <!-- <li>or a state</li> -->
+      </ul>
+    </form>
+    <script>
+      const endpoint =
+        "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
+
+      // const cities = [];
+
+      const cities = [
+        {
+          titol: "Caminar por la montaña",
+          growth_from_2000_to_2013: "4.8%",
+          latitude: 40.7127837,
+          longitude: -74.0059413,
+          id: 1,
+          descripcio: "jordi el niño P"
+        },
+        {
+          titol: "Ganar 200 euros",
+          growth_from_2000_to_2013: "4.8%",
+          latitude: 34.0522342,
+          longitude: -118.2436849,
+          id: 2,
+          descripcio: "ventas"
+        },
+        {
+          titol: "vodafone",
+          growth_from_2000_to_2013: "-6.1%",
+          latitude: 41.8781136,
+          longitude: -87.6297982,
+          id: 3,
+          descripcio: "sueldo"
+        },
+        {
+          titol: "ostia pilotes",
+          growth_from_2000_to_2013: "11.0%",
+          latitude: 29.7604267,
+          longitude: -95.3698028,
+          id: 4,
+          descripcio: "que son de bones"
+        },
+        {
+          titol: "ses taronjes",
+          growth_from_2000_to_2013: "2.6%",
+          latitude: 39.9525839,
+          longitude: -75.1652215,
+          id: 5,
+          descripcio: "son molt bonas"
+        }
+      ];
+      // fetch(endpoint)
+      //   .then(blob => blob.json())
+      //   .then(data => cities.push(...data));
+
+      console.log(cities);
+
+      function findMatches(wordToMatch, cities) {
+        return cities.filter(place => {
+          // here we need to figure out if the city or state matches what was searched
+          const regex = new RegExp(wordToMatch, "gi");
+          return place.titol.match(regex) || place.descripcio.match(regex);
+        });
+      }
+
+      function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function displayMatches() {
+        const matchArray = findMatches(this.value, cities);
+        const html = matchArray
+          .map(place => {
+            const regex = new RegExp(this.value, "gi");
+            const cityName = place.titol.replace(
+              regex,
+              `<span class="hl">${this.value}</span>`
+            );
+            const stateName = place.descripcio.replace(
+              regex,
+              `<span class="hl">${this.value}</span>`
+            );
+            return `
+        <li>
+          <span class="name">${cityName}, ${stateName}</span>
+          <span class="population">${place.id}</span>
+        </li>
+      `;
+          })
+          .join("");
+        suggestions.innerHTML = html;
+      }
+
+      const searchInput = document.querySelector(".search");
+      const suggestions = document.querySelector(".suggestions");
+
+      searchInput.addEventListener("change", displayMatches);
+      searchInput.addEventListener("keyup", displayMatches);
+    </script>
+  </body>
+</html>
