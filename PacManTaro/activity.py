@@ -187,7 +187,7 @@ def add_activity():
     #return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><body><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p></body>"
     flash("Ubicació " + request.form.get('nom_ubicacio') + " afegida correctament")
     #return redirect(url_for('activity.allact'))
-    return "<a href='/full_list' target='_blank' onClick='openWindowReload(this)'><p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a></p><script>\
+    return "<p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><a href='/full_list' target='_blank' onClick='openWindowReload(this)'><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a><br><br><a href='/form_test/{{ last_activity.id }}' target='_blank'><button type='submit' class='btn btn-primary btn-block'>Descarrega el PDF amb la sol·licitud legal</button></a></p><script>\
 			function openWindowReload(link) {\
 				var href = link.href;\
 				window.open(href,'_blank');\
