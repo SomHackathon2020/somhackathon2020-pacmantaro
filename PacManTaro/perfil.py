@@ -34,7 +34,7 @@ def perfil_personal():
     if current_user.is_authenticated:
         this_activities = Activitat.query.filter_by(user_id=current_user.id)
         #this_activities.inscrits = this_activities.inscrits + ", "
-        return render_template('profile.html', activities=this_activities, actiu=True)
+        return render_template('profile_own.html', activities=this_activities, actiu=True)
     return render_template('login.html')
 
 
@@ -49,8 +49,9 @@ def perfil_inscripcions():
                 acts_inscrits.append(el)
 
 
+
         #this_activities.inscrits = this_activities.inscrits + ", "
-        return render_template('profile.html', activities=acts_inscrits, actiu=True)
+        return render_template('profile_own.html', activities=acts_inscrits, actiu=True, hideContact=True)
     return render_template('login.html')
 
 @perfil.route('/inscriume/<int:id_activitat>')
@@ -61,6 +62,6 @@ def inscriume(id_activitat):
         db.session.add(this_activity)
         db.session.commit()
         #this_activities.inscrits = this_activities.inscrits + ", "
-        render_template('activity_detail.html', this_activity=this_activity, actiu=True)
+        return render_template('activity_detail_own.html', this_activity=this_activity, actiu=True)
     else:
         return render_template('login.html')

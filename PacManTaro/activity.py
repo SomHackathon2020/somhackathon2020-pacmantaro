@@ -281,5 +281,15 @@ def search_results():
 def form_test(id_activitat):
     print(id_activitat)
     this_activity = Activitat.query.filter_by(id=int(id_activitat)).first()
+    hideInsc = False
+    if str(current_user.id) in this_activity.inscrits:
+        hideInsc = True
+
+    hideContact = False
+    #if str(current_user.id) == this_activity.user_id:
+    #    hideContact = True
+
+    print("VALUE HIDEINSC")
+    print(str(hideInsc))
     print(this_activity.titol)
-    return render_template('activity_detail.html', this_activity=this_activity, actiu=True)
+    return render_template('activity_detail.html', this_activity=this_activity, actiu=True, hideInsc=hideInsc, hideContact=hideContact)

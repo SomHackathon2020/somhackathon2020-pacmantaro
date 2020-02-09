@@ -26,17 +26,10 @@
         <div class="card" style="width: 100%;">
                 <!--<p>{ one_activity.url_imatge }}</p>-->
               <div class="card-body">
-                  <!--{  if hideInsc == True %}-->
-                  <a href="/inscriume/{{ this_activity.id }}"><button type="submit" class="btn btn-success btn-block">Inscriure'm a l'activitat</button></a>
-                 <!--{ endif %}-->
-                  <br>
-                {%  if hideContact == True %}
                   <button type="submit" class="btn btn-info btn-block">Contactar amb l'organització</button>
                 <br>
-                {% endif %}
                   <a href="/form_test/{{ this_activity.id }}" target="_blank"><button type="submit" class="btn btn-primary btn-block">Visualitza la sol·licitud legal</button></a>
               </div>
-
           </div>
         </div>
         </div>
