@@ -273,4 +273,4 @@ def form_test(id_activitat):
     print(id_activitat)
     this_activity = Activitat.query.filter_by(id=id_activitat).first()
     print(this_activity.titol)
-    return render_template('activity_detail.html', this_activity=this_activity)
+    return render_template('activity_detail.html', this_activity=this_activity, actiu=True)
