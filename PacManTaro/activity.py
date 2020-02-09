@@ -256,14 +256,7 @@ def search_results():
         dict_this["id"] = act.id
         dict_this["descripcio"] = act.descripcio_activitat
         list_all.append(dict_this)
-        """
-        titol: "Caminar por la montaña",
-        growth_from_2000_to_2013: "4.8%",
-        latitude: 40.7127837,
-        longitude: -74.0059413,
-        id: 1,
-        descripcio: "jordi el niño P"
-        """
+
     print("WHOLE LIST")
     print(list_all)
 
@@ -272,3 +265,12 @@ def search_results():
     #return jsonify([act.json() for act in all_activities])
     #print(list(map(json.dumps, all_activities)))
     #return render_template("search_list.html
+
+
+
+@activity.route('/activity_detail/<int:id_activitat>')
+def form_test(id_activitat):
+    print(id_activitat)
+    this_activity = Activitat.query.filter_by(id=id_activitat).first()
+    print(this_activity.titol)
+    return render_template('activity_detail.html', this_activity=this_activity)

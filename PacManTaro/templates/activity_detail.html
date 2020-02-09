@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="py-5">
+    <div class="container">
+        <div class="row ">
+
+        <div class="col-md-4">
+        <div class="card" style="width: auto;">
+                <!--<p>{ one_activity.url_imatge }}</p>-->
+              <img class="card-img-top" src="{{this_activity.url_imatge }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ this_activity.titol }}</h5>
+                <!--<h4 class="card-title">{ one_activity.categoria }}</h4>-->
+                <h3 class="card-title">{{ this_activity.nom_ubicacio }}</h3>
+                <p class="card-text"><i>{{ this_activity.data }}</i></p>
+                <p class="card-text"><b>{{ this_activity.user.name }}</b></p>
+                <p class="card-text">{{ this_activity.descripcio_activitat }}</p>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}
