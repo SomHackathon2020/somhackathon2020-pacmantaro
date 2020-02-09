@@ -39,5 +39,9 @@ from analysis import analysis as analysis_blueprint
 app.register_blueprint(analysis_blueprint)
 
 
+from pdf_form import pdf_form as pdf_form_blueprint
+app.register_blueprint(pdf_form_blueprint)
+
+
 def create_app():
     return app
