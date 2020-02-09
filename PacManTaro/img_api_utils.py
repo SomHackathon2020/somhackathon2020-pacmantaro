@@ -37,7 +37,8 @@ def remove_words(text, stops=getStops(), hard_stops=",.-_!?¡''*+^/|"):
 
 def analyze(text, corpus, max_k=3):
     if corpus is None:
-        return corpus.split(" ")
+        #return corpus.split(" ")
+        return ""
 
 
     vectorizer = TfidfVectorizer()

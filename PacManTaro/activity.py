@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, request, flash
+from flask import Blueprint, render_template, redirect, url_for, request, flash, jsonify
 from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -134,6 +134,7 @@ def search_activity_post():
 
 
     new_activity = Activitat(
+        user_id=current_user.id,
         completed=False,
         titol=request.form.get('titol'),
         comentari_adicional=request.form.get('comentari_adicional'),
@@ -169,10 +170,13 @@ def search_activity_post():
                            activity=generate_map(category=activity, return_format="html"),
                            )
 
-
+@login_required
 @activity.route('/add-activity', methods=['POST'])
 def add_activity():
-    last_activity = Activitat.query.filter_by(id=1).first()
+
+    last_activity = Activitat.query.filter_by(user_id=current_user.id).first()
+    print("CURRENT USER ID")
+    print(current_user.id)
     last_activity.completed = True
     last_activity.nom_ubicacio = request.form.get('nom_ubicacio')
     last_activity.lat = request.form.get('lat')
@@ -199,6 +203,7 @@ def allact():
     #return render_template("act_list.html", acts=acts)
 
 
+@login_required
 @activity.route('/full_list')
 def full_list():
     all_activities = Activitat.query.all()
@@ -210,4 +215,60 @@ def full_list():
         print(element.url_imatge)
     print("PRINTED")
     """
-    return render_template("full_list.html", all_activities=all_activities)
+    return render_template("full_list.html", all_activities=all_activities, actiu=True)
+
+"""
+@login_required
+@activity.route('/search_results')
+def search():
+    all_activities = Activitat.query.all()
+    print("heeeere")
+    print(all_activities)
+    print("LIST COMP")
+    print(str([act.json() for act in all_activities]))
+    return jsonify([act.json() for act in all_activities])
+    #print(list(map(json.dumps, all_activities)))
+    #return render_template("search_list.html", all_activities=map(json.dumps, all_activities), actiu=True)
+"""
+
+
+@activity.route('/search')
+def search():
+    return render_template("search_list.html")
+
+
+
+@activity.route('/search_results')
+def search_results():
+    all_activities = Activitat.query.all()
+    print("heeeere")
+    print(all_activities)
+    print("LIST COMP")
+
+    list_all = []
+
+    for act in all_activities:
+        dict_this = {}
+        dict_this["titol"] = act.titol
+        dict_this["growth_from_2000_to_2013"] = "4.8%"
+        dict_this["latitude"] = act.lat
+        dict_this["longitude"] = act.lon
+        dict_this["id"] = act.id
+        dict_this["descripcio"] = act.descripcio_activitat
+        list_all.append(dict_this)
+        """
+        titol: "Caminar por la montaña",
+        growth_from_2000_to_2013: "4.8%",
+        latitude: 40.7127837,
+        longitude: -74.0059413,
+        id: 1,
+        descripcio: "jordi el niño P"
+        """
+    print("WHOLE LIST")
+    print(list_all)
+
+
+    return jsonify(list_all)
+    #return jsonify([act.json() for act in all_activities])
+    #print(list(map(json.dumps, all_activities)))
+    #return render_template("search_list.html
