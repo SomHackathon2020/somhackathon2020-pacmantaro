@@ -87,6 +87,8 @@ def search_activity_post():
             "casals": "static/img/casals.png",
         }
 
+        category=category.lower()
+
         if category not in icon_dict.keys():
             category = "esports"
 
