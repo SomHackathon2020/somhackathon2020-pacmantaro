@@ -53,6 +53,7 @@ class Activitat(db.Model):
     valoracio_mitjana_activitat = db.Column(db.String(1000))
     extra = db.Column(db.String(1000)) #(string)
     keywords = db.Column(db.String(200))
+    inscrits = db.Column(db.String(1000))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))  # , nullable=False))
     user = db.relationship("User", foreign_keys=[user_id])
 
