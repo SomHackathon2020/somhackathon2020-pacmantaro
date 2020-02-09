@@ -61,7 +61,7 @@ def getKeywords(title, corpus_keys=None):
 
     # get TfIdf
     keywords = analyze(doc_1, corpus_keys, max_k=100)
-    return " ".join(keywords)
+    return remove_words(" ".join(keywords))
 
 
 def getImageURL(title, corpus_keys=None, location="mataró", max_k=3):
