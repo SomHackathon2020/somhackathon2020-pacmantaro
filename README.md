@@ -1,17 +1,29 @@
-# [Start Bootstrap - Grayscale](https://startbootstrap.com/template-overviews/grayscale/)
 
-[Grayscale](http://startbootstrap.com/template-overviews/grayscale/) is a multipurpose, one page HTML theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
+# MATCONN
+
+> Experiencias con valor.
+
+La soledad, junto con una baja oferta de actividades que generen la suficiente motivación, son dos de los problemas a los que pueden enfretarse las personas mayores. En MATCONN hemos querido convertir esos dos problemas en una oportunidad.
 
 ## Preview
 
+*aqui meter un screenshot de la app*
 [![Grayscale Preview](https://startbootstrap.com/assets/img/screenshots/themes/grayscale.png)](https://blackrockdigital.github.io/startbootstrap-grayscale/)
 
+*aqui una URL si conseguimos hacer un deploy "real world"*
 **[View Live Preview](https://blackrockdigital.github.io/startbootstrap-grayscale/)**
+
+## Valor añadido
+
+Nuestra propuesta se podría concretar en tres puntos:
+
+  * Calidad de vida
+  * Valor cultural
+  * No más burocracia
 
 ## Status
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-grayscale/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-grayscale.svg)](https://www.npmjs.com/package/startbootstrap-grayscale)
 [![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-grayscale)
 [![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale)
 [![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-grayscale?type=dev)
@@ -23,6 +35,7 @@ To begin using this template, choose one of the following options to get started
 * Install via npm: `npm i startbootstrap-grayscale`
 * Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-grayscale.git`
 * [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-grayscale)
+
 
 ## Usage
 
