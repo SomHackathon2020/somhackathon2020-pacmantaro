@@ -150,6 +150,7 @@ def search_activity_post():
         nom_ubicacio="",
         valoracio_mitjana_activitat="",
         extra="",
+        inscrits="",
         keywords=getKeywords(request.form.get('titol'), corpus_keys=all_keywords),  # example: walk,beach,tour
     )
     db.session.add(new_activity)
@@ -194,7 +195,7 @@ def add_activity():
     db.session.add(last_activity)
     db.session.commit()
     # return "<head><meta http-equiv='refresh' content='2; URL=http://example.com/'></head><body><p style='text-align: center;'>Ubicació afegida a l'activitat correctament</p></body>"
-    flash("Ubicació " + request.form.get('nom_ubicacio') + " afegida correctament")
+    #flash("Ubicació " + request.form.get('nom_ubicacio') + " afegida correctament")
     # return redirect(url_for('activity.allact'))
     return f"""<p style='text-align: center;'>Ubicació afegida a l'activitat correctament<br><br><a href='/full_list' target='_blank' onClick='openWindowReload(this)'><button type='submit' class='btn btn-primary btn-block'>Consulta totes les activitats</button></a><br><br><a href='/form_test/{last_activity.id}' target='_blank'><button type='submit' class='btn btn-primary btn-block'>Descarrega el PDF amb la sol·licitud legal</button></a></p><script>\
 			function openWindowReload(link){{
