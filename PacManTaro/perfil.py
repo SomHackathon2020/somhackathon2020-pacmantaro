@@ -27,3 +27,22 @@ def inscriume(id_activitat):
         this_activities.inscrits = this_activities.inscrits + ", "
         return render_template('profile.html', activities=this_activities, actiu=True)
     return render_template('login.html')
+
+
+@perfil.route('/perfil')
+def perfil_personal():
+    if current_user.is_authenticated:
+        this_activities = Activitat.query.filter_by(user_id=current_user.id)
+        #this_activities.inscrits = this_activities.inscrits + ", "
+        return render_template('profile.html', activities=this_activities, actiu=True)
+    return render_template('login.html')
+
+
+
+@perfil.route('/inscripcions')
+def perfil_inscripcions():
+    if current_user.is_authenticated:
+        this_activities = Activitat.query.filter_by(user_id=current_user.id)
+        #this_activities.inscrits = this_activities.inscrits + ", "
+        return render_template('profile.html', activities=this_activities, actiu=True)
+    return render_template('login.html')
