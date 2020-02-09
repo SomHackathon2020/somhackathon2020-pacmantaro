@@ -9,7 +9,7 @@ La soledad, junto con una baja oferta de actividades que generen la suficiente m
 
 ![GBase Image](readme_img.jpeg)
 
-**[View Live Preview: http://167.172.252.165:5000/](http://167.172.252.165:5000/)**
+**[View Live Preview (abrir con connexión privada (e.g. redes móviles); algunos firewalls públicos bloquean todas las direcciones sin dominio): http://167.172.252.165:5000/](http://167.172.252.165:5000/)**
 
 ## Valor añadido
 
