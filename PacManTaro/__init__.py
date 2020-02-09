@@ -43,5 +43,9 @@ from pdf_form import pdf_form as pdf_form_blueprint
 app.register_blueprint(pdf_form_blueprint)
 
 
+from perfil import perfil as perfil_blueprint
+app.register_blueprint(perfil_blueprint)
+
+
 def create_app():
     return app

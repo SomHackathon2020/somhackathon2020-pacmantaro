@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <title>PERFIL</title>
+    <div class="py-5">
+    <div class="container">
+        <div class="row ">
+        {% for this_activity in activities %}
+        <div class="col-md-8">
+        <div class="card" style="width: 100%;">
+                <!--<p>{ one_activity.url_imatge }}</p>-->
+              <img class="card-img-top" src="{{this_activity.url_imatge }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Titol: <b>{{ this_activity.titol }}</b></h5>
+                <!--<h4 class="card-title">{ one_activity.categoria }}</h4>-->
+                <h3 class="card-title"><b>{{ this_activity.nom_ubicacio }}</b></h3>
+                <p class="card-text">Data: <i>{{ this_activity.data }}</i></p>
+                <p class="card-text">Autor: <b>{{ this_activity.user.name }}</b></p>
+                <p class="card-text">Descripció: <b>{{ this_activity.descripcio_activitat }}</b></p>
+                <p class="card-text">Comentari: <b>{{ this_activity.comentari_adicional }}</b></p>
+                <p class="card-text">Ubicació: <b>{{ this_activity.nom_ubicacio}}</b></p>
+          </div>
+        </div>
+        </div>
+
+         <div class="col-md-4">
+        <div class="card" style="width: 100%;">
+                <!--<p>{ one_activity.url_imatge }}</p>-->
+              <div class="card-body">
+                 <button type="submit" class="btn btn-success btn-block">Inscriure'm a l'activitat</button>
+                 <br>
+                  <button type="submit" class="btn btn-info btn-block">Contactar amb l'organització</button>
+              </div>
+
+          </div>
+        </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+    </div>
+
+{% endblock %}

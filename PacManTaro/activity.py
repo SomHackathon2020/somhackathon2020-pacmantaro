@@ -139,7 +139,7 @@ def search_activity_post():
         titol=request.form.get('titol'),
         comentari_adicional=request.form.get('comentari_adicional'),
         descripcio_activitat=request.form.get('descripcio_activitat'),
-        categoria=request.form.get('categoria'),
+        categoria=request.form.get('activity'),
         remuneracio=request.form.get('remuneracio'),
         url_imatge=getImageURL(request.form.get('titol'), corpus_keys=all_keywords),
         rang_persones=request.form.get('rang_persones'),
